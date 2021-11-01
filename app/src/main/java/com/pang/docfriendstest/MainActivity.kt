@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true) // 왼쪽 버튼, 기본값 뒤로가기 버튼
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_search_w) // 왼쪽 버튼 아이콘 변경
 
+        // 유저 프로필을 정원으로 크롭해서 set 하기
         val bitmap = createRoundBitmapIcon(R.drawable.user_profile, this)
         val cropedProfile = BitmapDrawable(resources, bitmap)
         binding.userProfileImage.setImageDrawable(cropedProfile)
